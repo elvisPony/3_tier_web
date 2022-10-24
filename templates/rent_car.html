@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>租車系統</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js" defer></script>
+    <script src="/static/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="web-title">
+        <p>租車系統 </p>
+    </div>
+    <div class="contianer">
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker"> May </span>
+                <div class="year-picker" id="year-picker">
+                    <span class="year-change" id="pre-year">
+                        <pre><</pre>
+                    </span>
+                    <span id="year">2020 </span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
+            </div>
+
+            <div class="calendar-body">
+                <div class="calendar-week-days">
+                    <div>日</div>
+                    <div>一</div>
+                    <div>二</div>
+                    <div>三</div>
+                    <div>四</div>
+                    <div>五</div>
+                    <div>六</div>
+                </div>
+                <div class="calendar-days">
+                </div>
+            </div>
+            <div class="calendar-footer">
+            </div>
+            <div class="date-time-formate">
+                <div class="day-text-formate">今天</div>
+                <div class="date-time-value">
+                    <div class="time-formate">02:51:20</div>
+                    <div class="date-formate">23 - july - 2022</div>
+                </div>
+            </div>
+            <div class="month-list"></div>
+        </div>
+
+        <div class="rent-car">
+            <form>
+                  <input onclick="choiceCar(this.id)" checked type="radio" id="AXK-9113" name="fav_language"
+                    value="AXK-9113">
+                  <label onclick="choiceCar(this.id)" for="AXK-9113">AXK-9113</label><br>
+                  <input onclick="choiceCar(this.id)" type="radio" id="C8-7630" name="fav_language" value="C8-7630">
+                  <label onclick="choiceCar(this.id)" for="C8-7630">C8-7630</label><br>
+                 
+                <input id="sendButton" onclick="postInformation()" type="submit" value="Submit">
+            </form>
+            <div class="showInformation" id="rent-information"></div>
+            <br>
+            <div class="showBookingInformation" id="booking-information"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+-->
